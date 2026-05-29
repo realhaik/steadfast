@@ -162,9 +162,3 @@ requirements.txt
 ```
 
 You may restructure however you like, but all stages must be identifiable and the full pipeline must run from a single entry point.
-
-**Q: How important is the knowledge base for classification?**
-A: Very. Some tickets reference Steadfast-specific features and terminology that an LLM won't know about without KB context. Your pipeline should use the KB, not just classify from ticket text alone.
-
-**Q: How is response quality scored on the hidden test set?**
-A: By an LLM judge evaluating relevance, tone, and actionability. Responses that reference specific Steadfast features, workarounds, or known issues from the KB score higher than generic empathetic responses. Getting the right advice for the wrong issue (e.g., fixing the wrong endpoint) is penalized.
